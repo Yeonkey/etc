@@ -35,7 +35,6 @@ while True:
         # Receives the request message from the client
         sentence = connectionSocket.recv(1024).decode()
 
-
         # Extract the path of the requested object from the message
         # The path is the second part of HTTP header, identified by [1]
         filename = message.split()[1]
@@ -66,3 +65,4 @@ while True:
 
 serverSocket.close()
 sys.exit()#Terminate the program after sending the corresponding data
+#
